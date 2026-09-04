@@ -1,0 +1,33 @@
+reboot:
+  target:
+    entity:
+      integration: pprpc_camera
+      domain: camera
+talk:
+  target:
+    entity:
+      integration: pprpc_camera
+      domain: camera
+  fields:
+    media:
+      required: true
+      selector:
+        media:
+ptz:
+  target:
+    entity:
+      integration: pprpc_camera
+      domain: camera
+  fields:
+    tilt:
+      selector:
+        select:
+          options:
+            - "DOWN"
+            - "UP"
+    pan:
+      selector:
+        select:
+          options:
+            - "LEFT"
+            - "RIGHT"

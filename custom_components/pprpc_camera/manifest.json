@@ -1,0 +1,11 @@
+{
+  "domain": "pprpc_camera",
+  "name": "PPRPC Camera",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["ffmpeg"],
+  "iot_class": "local_polling",
+  "loggers": ["aiopprpc"],
+  "requirements": ["aiopprpc==0.1.0", "pycryptodome"],
+  "version": "0.1.0"
+}

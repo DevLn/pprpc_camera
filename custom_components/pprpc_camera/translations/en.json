@@ -1,0 +1,166 @@
+{
+  "entity": {
+    "camera": {
+      "camera": {
+        "name": "Camera"
+      }
+    },
+    "button": {
+      "flashlight": {
+        "name": "Flashlight"
+      },
+      "reboot": {
+        "name": "Reboot"
+      },
+      "sync_time": {
+        "name": "Sync time"
+      }
+    },
+    "switch": {
+      "status_led": {
+        "name": "Status LED"
+      }
+    },
+    "select": {
+      "flip": {
+        "name": "Orientation",
+        "state": {
+          "upright": "Upright",
+          "mirror": "Mirror",
+          "flip": "Upside down",
+          "rotate_180": "Rotated 180°"
+        }
+      },
+      "ircut": {
+        "name": "Night vision",
+        "state": {
+          "on": "On",
+          "off": "Off",
+          "auto": "Auto"
+        }
+      },
+      "night_light": {
+        "name": "Night light mode",
+        "state": {
+          "intelligent": "Intelligent",
+          "black_white": "Black & white",
+          "full_color": "Full color"
+        }
+      },
+      "motion_sensitivity": {
+        "name": "Motion sensitivity",
+        "state": {
+          "close": "Off",
+          "low": "Low",
+          "medium": "Medium",
+          "high": "High"
+        }
+      }
+    },
+    "sensor": {
+      "signal": {
+        "name": "Signal strength"
+      },
+      "ssid": {
+        "name": "Wi-Fi network"
+      },
+      "ip_address": {
+        "name": "IP address"
+      },
+      "mac": {
+        "name": "MAC address"
+      },
+      "clock_drift": {
+        "name": "Clock drift"
+      },
+      "sdk": {
+        "name": "SDK version"
+      }
+    },
+    "binary_sensor": {
+      "motion": {
+        "name": "Motion"
+      }
+    }
+  },
+  "config": {
+    "abort": {
+      "already_configured": "Device is already configured",
+      "unique_id_mismatch": "The camera at this address is a different device"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "device_mismatch": "The camera at this address reports a different device ID than the one discovered"
+    },
+    "step": {
+      "user": {
+        "title": "Add camera",
+        "description": "Local connection only. No credentials are needed: authentication uses a single-use token from device discovery.",
+        "data": {
+          "host": "Host"
+        }
+      },
+      "reconfigure": {
+        "title": "Edit camera",
+        "description": "{name}",
+        "data": {
+          "host": "Host"
+        }
+      },
+      "discovery_confirm": {
+        "title": "Add camera",
+        "description": "{name}",
+        "data": {
+          "host": "Host"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Camera options",
+        "data": {
+          "idle_disconnect_delay": "Idle disconnect delay (seconds)",
+          "status_poll_interval": "Status poll interval (seconds)",
+          "info_poll_interval": "Device info poll interval (seconds)"
+        },
+        "data_description": {
+          "idle_disconnect_delay": "How long to keep the camera session warm after the last operation. 0 disconnects immediately.",
+          "status_poll_interval": "How often to refresh the Wi-Fi signal strength and network name. Only polled while at least one of those entities is enabled. 0 disables polling.",
+          "info_poll_interval": "How often to refresh the camera clock drift and network details. These rarely change, so this can be long. 0 disables polling."
+        }
+      }
+    }
+  },
+  "services": {
+    "reboot": {
+      "name": "Reboot",
+      "description": "Reboots the camera."
+    },
+    "talk": {
+      "name": "Talk",
+      "description": "Plays an audio media or TTS source through the camera speaker (talk-back).",
+      "fields": {
+        "media": {
+          "name": "Media",
+          "description": "Audio media or TTS to play through the camera speaker."
+        }
+      }
+    },
+    "ptz": {
+      "name": "PTZ",
+      "description": "Pans or tilts the camera one step.",
+      "fields": {
+        "tilt": {
+          "name": "Tilt",
+          "description": "Tilt direction."
+        },
+        "pan": {
+          "name": "Pan",
+          "description": "Pan direction."
+        }
+      }
+    }
+  }
+}
