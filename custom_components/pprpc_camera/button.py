@@ -1,6 +1,6 @@
 """PPRPC buttons: reboot, time sync, and the flashlight.
 
-The flashlight is a button by design, not a stripped-down switch: datapoint
+The flashlight is a button by design, not a stripped-down switch: IoT cid
 201 is a stateless toggle on the wire. Any message addressed to it flips the
 light -- the payload is ignored, and even a value-less "read" actuates it --
 so there is no state to display and no safe way to query one. A press is the

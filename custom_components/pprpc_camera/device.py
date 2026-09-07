@@ -298,7 +298,7 @@ class PPRPCDevice:
     async def async_toggle_flashlight(self, data=None) -> None:
         """Flip the white flashlight.
 
-        Datapoint 201 is a stateless toggle: any message addressed to it flips
+        IoT cid 201 is a stateless toggle: any ExecIOTCMD addressed to it flips
         the light, the payload is ignored, and even a value-less "read"
         actuates it. There is no state to query, which is why this is a button
         press and not a switch.
