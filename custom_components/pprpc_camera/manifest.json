@@ -6,6 +6,6 @@
   "dependencies": ["ffmpeg"],
   "iot_class": "local_polling",
   "loggers": ["aiopprpc"],
-  "requirements": ["aiopprpc==0.1.0", "pycryptodome"],
+  "requirements": ["https://github.com/DevLn/aiopprpc/archive/aa6e077c976dac8395cf7419eb51d9544c0fa246.zip#aiopprpc==0.1.0", "pycryptodome"],
   "version": "0.1.0"
 }
